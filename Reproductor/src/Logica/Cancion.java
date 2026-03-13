@@ -2,19 +2,21 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package reproductor;
+package Logica;
 
 /**
  *
  * @author Nathan
  */
 public class Cancion extends ArchivoMultimedia {
+
     private String artista;
     private GeneroMusical genero;
     private String imagen;
 
-    public Cancion(String artista, GeneroMusical genero, String imagen, String nombre, String rutaArchivo, String duracion) {
-        super(nombre, rutaArchivo, duracion);
+    public Cancion(String nombre, String artista, String duracion,
+                   GeneroMusical genero, String archivoMusica, String imagen) {
+        super(nombre, archivoMusica, duracion);
         this.artista = artista;
         this.genero = genero;
         this.imagen = imagen;
@@ -31,12 +33,13 @@ public class Cancion extends ArchivoMultimedia {
     public String getImagen() {
         return imagen;
     }
-    
-    public String getArchivoMusical(){
+
+    public String getArchivoMusica() {
         return getRutaArchivo();
     }
-    
-    public String toString(){
-        return getNombre()+" - "+artista;
+
+    @Override
+    public String toString() {
+        return getNombre() + " - " + artista;
     }
 }
