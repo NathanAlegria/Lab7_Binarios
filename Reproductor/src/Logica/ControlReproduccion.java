@@ -18,3 +18,4 @@ public interface ControlReproduccion {
    boolean estaPausado();
    long obtenerTiempoActualEnSegundos();
 }
+ 
